@@ -1,0 +1,43 @@
+/project-backend/node_modules
+/project-backend/public/build
+/project-backend/public/hot
+/project-backend/public/storage
+/project-backend/storage/*.key
+/project-backend/vendor
+/project-backend/.env
+/project-backend/.env.backup
+/project-backend/.env.production
+/project-backend/.phpunit.result.cache
+/project-backend/Homestead.json
+/project-backend/Homestead.yaml
+/project-backend/auth.json
+/project-backend/npm-debug.log
+/project-backend/yarn-error.log
+/project-backend/.fleet
+/project-backend/.idea
+/project-backend/.vscode
+
+
+/project-frontend/.DS_Store
+/project-frontend/node_modules
+/project-frontend/dist
+
+
+# local env files
+/project-frontend/.env.local
+/project-frontend/.env.*.local
+
+# Log files
+/project-frontend/npm-debug.log*
+/project-frontend/yarn-debug.log*
+/project-frontend/yarn-error.log*
+/project-frontend/pnpm-debug.log*
+
+# Editor directories and files
+/project-frontend/.idea
+/project-frontend/.vscode
+/project-frontend/*.suo
+/project-frontend/*.ntvs*
+/project-frontend/*.njsproj
+/project-frontend/*.sln
+/project-frontend/*.sw?

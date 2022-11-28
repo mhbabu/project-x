@@ -11,12 +11,10 @@ const store = createStore({
   actions: {
     increment() {
       this.state.count++;
-
-      console.log('bb');
     },
 
     decrement() {
-      if (this.state.count > 0) count--;
+      if (this.state.count > 0) this.state.count--;
     },
   },
 });

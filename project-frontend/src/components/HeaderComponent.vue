@@ -16,6 +16,15 @@
             <li class="nav-item">
               <router-link class="nav-link" to="vue-x">VueX</router-link>
             </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="registers"><i class="fa fa-user-plus"></i> Register</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="login"><i class="fa fa-user-plus"></i> Login</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="logout"><i class="fa fa-user-cog"></i> Logout</router-link>
+            </li>
           </ul>
         </div>
       </div>

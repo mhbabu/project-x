@@ -90,7 +90,6 @@ export default {
         };
 
         try {
-
           const res = await axios.post('http://project-x.test/api/login', { email :data.email, password: data.password });
           localStorage.setItem('token', res.data.token);
           this.$store.dispatch('updateToken', res.data.token);

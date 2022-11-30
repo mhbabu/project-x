@@ -1,37 +1,42 @@
 import { createStore } from "vuex";
-import createPersistedState from 'vuex-persistedstate';
-
+import createPersistedState from "vuex-persistedstate";
 
 const store = createStore({
   state() {
     return {
       count: 0,
-      token: 'no token',
+      token: null,
       user: {},
     };
   },
 
   mutations: {
-    addToken(state, payload){
-      console.log('this is mutation');
-      console.log(payload);
-      state.token = payload
+    addToken(state, payload) {
+      state.token = payload;
     },
+
+    clearToken(state) {
+      state.token = '';
+    },
+
     increment() {
       this.state.count++;
-      console.log(this.state.count);
     },
 
     decrement() {
       if (this.state.count > 0) this.state.count--;
-      console.log(this.state.count);
     },
   },
 
   actions: {
     updateToken(context, payload) {
-      context.commit('addToken',payload);
+      context.commit("addToken", payload);
     },
+
+    logout(context) {
+      context.commit("clearToken");
+    },
+
     increment() {
       this.state.count++;
     },
@@ -39,10 +44,8 @@ const store = createStore({
     decrement() {
       if (this.state.count > 0) this.state.count--;
     },
-
   },
   plugins: [createPersistedState()],
 });
-
 
 export default store;

@@ -1,4 +1,4 @@
-<style scoped>
+<style>
 .required-star:after{
   color: red;
   content: " *";
@@ -23,9 +23,9 @@
                 <label class="form-label mt-4 required-star" for="name">Name</label>
                 <input
                   type="text"
-                  value="name"
                   class="form-control"
                   id="name"
+                  v-model="name"
                   placeholder="Name"
                 />
               </div>
@@ -34,8 +34,8 @@
                 <label class="form-label mt-4 required-star" for="email">Email Address</label>
                 <input
                   type="text"
-                  value="email"
                   class="form-control"
+                  v-model="email"
                   id="email"
                   placeholder="Email Address"
                 />
@@ -45,8 +45,8 @@
                 <label class="form-label mt-4 required-star" for="phone">Phone</label>
                 <input
                   type="text"
-                  value="phone"
                   class="form-control"
+                  v-model="phone"
                   id="phone"
                   placeholder="Phone"
                 />
@@ -58,7 +58,7 @@
                 >
                 <input
                   type="text"
-                  value="designation"
+                  v-model="designation"
                   class="form-control"
                   id="designation"
                   placeholder="Designation"
@@ -95,7 +95,7 @@ export default {
       email: '',
       designation: '',
       phone: '',
-      errors: []
+      errors: {}
     };
   },
 
@@ -105,7 +105,7 @@ export default {
 
   methods: {
     saveContact(){
-      this.errors = [];
+      this.errors = {};
 
       if(!this.contacts.name) this.errors.push('Name filed is required');
       if(!this.contacts.email) this.errors.push('Email Address filed is required');

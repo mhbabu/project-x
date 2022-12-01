@@ -4,7 +4,7 @@
       <div class="card-header">
         <div class="row pt-1">
           <div class="col-md-6">
-            <h4><i class="fa fa-user-circle"></i> Login {{ $store.state.token }}</h4>
+            <h4><i class="fa fa-user-circle"></i> Login</h4>
           </div>
         </div>
       </div>
@@ -93,6 +93,7 @@ export default {
           const res = await axios.post('http://project-x.test/api/login', { email :data.email, password: data.password });
           localStorage.setItem('token', res.data.token);
           this.$store.dispatch('updateToken', res.data.token);
+          this.$router.push({ path: "/" });
 
         } catch (ex) {
           if (ex.response && ex.response.status === 400) {

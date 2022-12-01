@@ -10,6 +10,7 @@
               <span class="visually-hidden">(current)</span>
             </router-link>
           </li>
+          
           <li class="nav-item">
             <router-link class="nav-link" to="add-contacts"
               >Add Contact</router-link
@@ -18,17 +19,17 @@
           <li class="nav-item">
             <router-link class="nav-link" to="vue-x">VueX</router-link>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" v-if="!$store.state.token">
             <router-link class="nav-link" to="registers"
               ><i class="fa fa-user-plus"></i> Register</router-link
             >
           </li>
-          <li class="nav-item">
+          <li class="nav-item" v-if="!$store.state.token">
             <router-link class="nav-link" to="login"
               ><i class="fa fa-user-plus"></i> Login</router-link
             >
           </li>
-          <li class="nav-link" @click="logout" :style="{ color: 'pointer' }">
+          <li class="nav-link" @click="logout" :style="{ cursor: 'pointer' }" v-if="$store.state.token">
             <i class="fa fa-user-cog"></i> Logout
           </li>
         </ul>

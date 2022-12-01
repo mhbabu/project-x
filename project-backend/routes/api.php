@@ -23,7 +23,4 @@ Route::middleware('auth:sanctum')->group( function () {
     Route::post('logout', [AuthController::class, 'logout']);
 });
 
-
-
-
-Route::apiResource('contacts',ContactController::class);
+Route::apiResource('contacts', ContactController::class);

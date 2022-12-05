@@ -5,6 +5,7 @@ import VueXComponent from '../components/VueXComponent.vue';
 import RegisterComponent from '../components/RegisterComponent.vue';
 import LoginComponent from '../components/LoginComponent.vue';
 import NotFound from '../components/NotFound.vue';
+import MyComponent from '../components/MyComponent.vue';
 import store from '../store';
 
 const routes = [
@@ -13,6 +14,7 @@ const routes = [
     { path: '/vue-x', component: VueXComponent, meta: { requiresAuth: false } },
     { path: '/registers', component: RegisterComponent, meta: { requiresAuth: false } },
     { path: '/login', component: LoginComponent, meta: { requiresAuth: false } },
+    { path: '/my-component', component: MyComponent, meta: { requiresAuth: false } },
     { path: '/:pathMatch(.*)*', component: NotFound, meta: { requiresAuth: false } },
   ];
 

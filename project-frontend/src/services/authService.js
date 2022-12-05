@@ -1,6 +1,6 @@
 import http from "./httpService";
 import config from "../config.json";
-import store from './../store/index';
+import store from '../store';
 
 const apiEndPoint = config.apiUrl + "/login";
 const tokenKey = "token";

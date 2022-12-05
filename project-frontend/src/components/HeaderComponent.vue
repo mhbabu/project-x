@@ -32,6 +32,11 @@
           <li class="nav-link" @click="logout" :style="{ cursor: 'pointer' }" v-if="$store.state.token">
             <i class="fa fa-user-cog"></i> Logout
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="my-component"
+              ><i class="fa fa-user-plus"></i> My Component</router-link
+            >
+          </li>
         </ul>
       </div>
     </div>
